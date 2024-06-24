@@ -1,7 +1,7 @@
 my_dict = {
     'tuple': (1, 17, "test", False, 22.43, 14),
     'list': [2, 6, True, 14.29, None],
-    'dict': {'car' : 'Volvo', 'body' : 'SUV', 'color' : 'Black', 'price' : '12342', 'driver' : 'Boris'},
+    'dict': {'car': 'Volvo', 'body': 'SUV', 'color': 'Black', 'price': '12342', 'driver': 'Boris'},
     'set': {23, 47, False, True, 'name', 55}
 }
 print(my_dict['tuple'][-1])
