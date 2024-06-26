@@ -17,5 +17,6 @@ students = ['Ivanov', 'Petrov', 'Sidorov']
 subjects = ['math', 'biology', 'geography']
 student_1, student_2, student_3 = students
 subject_1, subject_2, subject_3 = subjects
-output_text = 'Students {0}, {1}, {2} study these subjects: {3}, {4}, {5}'
-print(output_text.format((student_1), (student_2), (student_3), (subject_1), (subject_2), (subject_3)))
+print('Students', ', '.join(students), 'study these subjects:', ', '.join(subjects))
+# output_text = 'Students {0}, {1}, {2} study these subjects: {3}, {4}, {5}'
+# print(output_text.format((student_1), (student_2), (student_3), (subject_1), (subject_2), (subject_3)))
