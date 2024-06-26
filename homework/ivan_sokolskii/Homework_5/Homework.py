@@ -1,7 +1,7 @@
-#Task 1
+# Task 1
 person = ['John', 'Doe', 'New York', '+1372829383739', 'US']
 name, last_name, city, phone, country = person
-#Task 2
+# Task 2
 result_1 = 'результат операции: 42'
 result_2 = 'результат операции: 514'
 result_3 = 'результат работы программы: 9'
@@ -12,7 +12,7 @@ num_2 += 10
 num_3 = int(result_3[-1])
 num_3 += 10
 print(num_1, num_2, num_3)
-#Task 3
+# Task 3
 students = ['Ivanov', 'Petrov', 'Sidorov']
 subjects = ['math', 'biology', 'geography']
 student_1, student_2, student_3 = students
