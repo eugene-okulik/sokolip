@@ -5,13 +5,12 @@ name, last_name, city, phone, country = person
 result_1 = 'результат операции: 42'
 result_2 = 'результат операции: 514'
 result_3 = 'результат работы программы: 9'
-num_1 = int(result_1[19:22])
-num_1 += 10
-num_2 = int(result_2[19:23])
-num_2 += 10
-num_3 = int(result_3[-1])
-num_3 += 10
-print(num_1, num_2, num_3)
+result_number_1 = int(result_1.split(":")[-1].strip())
+result_number_2 = int(result_2.split(":")[-1].strip())
+result_number_3 = int(result_3.split(":")[-1].strip())
+print(result_number_1 + 10)
+print(result_number_2 + 10)
+print(result_number_3 + 10)
 # Task 3
 students = ['Ivanov', 'Petrov', 'Sidorov']
 subjects = ['math', 'biology', 'geography']
