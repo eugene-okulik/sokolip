@@ -5,12 +5,21 @@ name, last_name, city, phone, country = person
 result_1 = 'результат операции: 42'
 result_2 = 'результат операции: 514'
 result_3 = 'результат работы программы: 9'
-result_number_1 = int(result_1.split(":")[-1].strip())
-result_number_2 = int(result_2.split(":")[-1].strip())
-result_number_3 = int(result_3.split(":")[-1].strip())
-print(result_number_1 + 10)
-print(result_number_2 + 10)
-print(result_number_3 + 10)
+index_1 = result_1.index(":") + 2
+num_1 = int(result_1[index_1:])
+print(num_1 + 10)
+index_2 = result_2.index(":") + 2
+num_2 = int(result_2[index_2:])
+print(num_2 + 10)
+index_3 = result_3.index(":") + 2
+num_3 = int(result_3[index_3:])
+print(num_3 + 10)
+# result_number_1 = int(result_1.split(":")[-1].strip())
+# result_number_2 = int(result_2.split(":")[-1].strip())
+# result_number_3 = int(result_3.split(":")[-1].strip())
+# print(result_number_1 + 10)
+# print(result_number_2 + 10)
+# print(result_number_3 + 10)
 # Task 3
 students = ['Ivanov', 'Petrov', 'Sidorov']
 subjects = ['math', 'biology', 'geography']
