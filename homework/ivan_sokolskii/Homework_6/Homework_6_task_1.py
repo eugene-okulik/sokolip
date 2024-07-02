@@ -11,7 +11,6 @@ for char in text:
             actual_word = ''
         if char == ',' or char == '.':
             words.append(char)
-print(words)
 add = 'ing'
 result_word = []
 for word in words:
@@ -19,9 +18,7 @@ for word in words:
         result_word.append(word)
     else:
         result_word.append(word + add)
-print(result_word)
 final_text = (' '.join(result_word))
-print(final_text)
 clear_text = final_text.replace(" ,", ",")
 clear_text_1 = clear_text.replace(" .", ".")
 print(clear_text_1)
