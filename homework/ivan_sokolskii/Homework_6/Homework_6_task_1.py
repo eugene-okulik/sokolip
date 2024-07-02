@@ -11,6 +11,8 @@ for char in text:
             actual_word = ''
         if char == ',' or char == '.':
             words.append(char)
+if actual_word:
+    words.append(actual_word)
 add = 'ing'
 result_word = []
 for word in words:
