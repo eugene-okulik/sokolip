@@ -23,7 +23,3 @@ for number in progression(100001):
         print(number)
         break
     count += 1
-
-
-
-
