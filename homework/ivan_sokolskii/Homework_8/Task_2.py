@@ -1,6 +1,6 @@
 
 
-def progression(limit = 100):
+def progression(limit=100):
     a = 0
     b = 1
     count_1 = 0
