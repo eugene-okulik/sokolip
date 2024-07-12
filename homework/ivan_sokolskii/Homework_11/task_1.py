@@ -20,9 +20,9 @@ book_1.reservation = True
 
 
 def reservation(n):
-    if n.reservation == True:
-        print(f'Название: {n.title}, Автор: {n.autor}, страниц: {n.page_count}, '
-      f'материал: {n.page_material}, зарезервирована')
+    if n.reservation:
+        print(f'Название: {n.title}, Автор: {n.autor}, страниц: {n.page_count},'
+              f'материал: {n.page_material}, зарезервирована')
     else:
         print(f'Название: {n.title}, Автор: {n.autor}, страниц: {n.page_count}, '
       f'материал: {n.page_material}')
@@ -45,7 +45,7 @@ class StudyBook(Book):
 
 
 def reservation(n):
-    if n.reservation == True:
+    if n.reservation:
         print(f'Название: {n.title}, Автор: {n.autor}, страниц: {n.page_count}, '
               f'предмет: {n.subject}, класс: {n.grade}, зарезервирована')
     else:
