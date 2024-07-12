@@ -41,7 +41,7 @@ class StudyBook(Book):
         self.subject = subject
         self.grade = grade
         self.task = task
-        
+
 
 def reservation(n):
     if n.reservation:
