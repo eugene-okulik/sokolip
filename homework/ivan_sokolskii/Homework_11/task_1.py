@@ -24,7 +24,8 @@ def reservation(n):
               f'материал: {n.page_material}, зарезервирована')
     else:
         print(f'Название: {n.title}, Автор: {n.autor}, страниц: {n.page_count}, '
-      f'материал: {n.page_material}')
+              f'материал: {n.page_material}')
+
 
 reservation(book_1)
 reservation(book_2)
@@ -40,6 +41,7 @@ class StudyBook(Book):
         self.subject = subject
         self.grade = grade
         self.task = task
+        
 
 def reservation(n):
     if n.reservation:
