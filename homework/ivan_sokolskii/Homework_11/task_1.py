@@ -2,7 +2,6 @@ class Book:
     text = True
     page_material = 'paper'
 
-
     def __init__(self, title, ISBN, autor, page_count):
         self.title = title
         self.ISBN = ISBN
@@ -27,22 +26,20 @@ def reservation(n):
         print(f'Название: {n.title}, Автор: {n.autor}, страниц: {n.page_count}, '
       f'материал: {n.page_material}')
 
-
 reservation(book_1)
 reservation(book_2)
 reservation(book_3)
 reservation(book_4)
 reservation(book_5)
 
+
 class StudyBook(Book):
 
-
-    def __init__(self,  title, ISBN, autor, page_count, subject, grade, task):
+    def __init__(self, title, ISBN, autor, page_count, subject, grade, task):
         super().__init__(title, ISBN, autor, page_count)
         self.subject = subject
         self.grade = grade
         self.task = task
-
 
 def reservation(n):
     if n.reservation:
