@@ -1,11 +1,11 @@
 class Flowers:
-  def __init__(self, name, color, fresher, live_time, price, length):
-      self.name = name
-      self.color = color
-      self.fresher = fresher
-      self.live_time = live_time
-      self.price = price
-      self.length = length
+    def __init__(self, name, color, fresher, live_time, price, length):
+        self.name = name
+        self.color = color
+        self.fresher = fresher
+        self.live_time = live_time
+        self.price = price
+        self.length = length
 
 
 class Rose(Flowers):
@@ -29,20 +29,16 @@ class Buket():
     def __init__(self):
         self.flowers = []
 
-
     def add_flowers(self, flower):
         self.flowers.append(flower)
-
 
     def cost(self):
         total_cost = sum(flower.price for flower in self.flowers)
         print(f'Стоимость букета: {total_cost}')
 
-
     def live_time_buket(self):
-        live_time = sum(flower.live_time for flower in self.flowers)/len(self.flowers)
+        live_time = sum(flower.live_time for flower in self.flowers) / len(self.flowers)
         print(f'Время жизни букета: {live_time}')
-
 
     def sort_flowers_by(self, key='color'):
         if key == 'color':
@@ -65,7 +61,7 @@ class Buket():
 
 white_rose = Rose('w_rose', 'white', 2, 10, 100, 17, 'yes')
 red_rose = Rose('r_rose', 'red', 1, 11, 120, 17, 'no')
-blue_rose  = Rose('b_rose', 'red', 2, 8, 105, 18, 'yes')
+blue_rose = Rose('b_rose', 'red', 2, 8, 105, 18, 'yes')
 big_daisy = Daisy('b_daisy' 'white', 3, 6, 80, 15, 'no', True)
 small_daisy = Daisy('s_daisy', 'pink', 4, 5, 97, 18, 'yes')
 red_tulp = Tulpan('r_tulp', 'red', 4, 7, 120, 20)
