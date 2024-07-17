@@ -43,20 +43,10 @@ class Buket():
     def sort_flowers_by(self, key='color'):
         if key == 'color':
             self.flowers.sort(key=lambda x: x.color)
-            for flower in buket_1.flowers:
-                print(flower)
-        elif key == 'name':
-            self.flowers.sort(key=lambda x: x.name)
-            for flower in buket_1.flowers:
-                print(flower)
         elif key == 'length':
             self.flowers.sort(key=lambda x: x.length)
-            for flower in buket_1.flowers:
-                print(flower)
         elif key == 'price':
             self.flowers.sort(key=lambda x: x.price)
-            for flower in buket_1.flowers:
-                print(flower)
 
 
 white_rose = Rose('w_rose', 'white', 2, 10, 100, 17, 'yes')
@@ -75,3 +65,4 @@ buket_1.add_flowers(pink_tulp)
 buket_1.cost()
 buket_1.live_time_buket()
 buket_1.sort_flowers_by('price')
+print(buket_1)
