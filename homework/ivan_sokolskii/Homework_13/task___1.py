@@ -24,4 +24,3 @@ for line in lines:
             today = datetime.datetime.now()
             diff = (today - date).days
             print(diff)
-
