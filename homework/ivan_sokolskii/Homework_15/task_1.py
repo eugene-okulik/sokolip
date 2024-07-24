@@ -49,6 +49,7 @@ cursor.executemany(
         ('OBJ',)
     ]
 )
+
 last_subjets_id = cursor.lastrowid
 penultimate_subjets_id = cursor.execute("SELECT id from subjets ORDER BY id DESC LIMIT 1 OFFSET 1")
 penultimate_subjets_id_value = cursor.fetchone()
