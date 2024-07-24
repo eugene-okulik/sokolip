@@ -15,7 +15,7 @@ cursor.execute(create_student, ('Matte', 'Manatee'))
 last_student_id = cursor.lastrowid
 print('идентификатор студента: ', last_student_id)
 create_groups = '''
-INSERT INTO `groups` (title, start_date, end_date) 
+INSERT INTO `groups` (title, start_date, end_date)
 VALUES (%s, %s, %s)
 '''
 cursor.execute(create_groups, ('QAgroup353', 'may 2024', 'oct 2024'))
@@ -23,7 +23,7 @@ last_id_group = cursor.lastrowid
 print('идентификатор группы: ', last_id_group)
 add_student_in_group = f'''
 UPDATE students
-SET group_id = {last_id_group} 
+SET group_id = {last_id_group}
 WHERE id = {last_student_id}
 '''
 cursor.execute(add_student_in_group)
@@ -56,7 +56,7 @@ cursor.execute(create_subjets_query, ('OBJ',))
 obj_subjet_id = cursor.lastrowid
 print('ID OBJ: ', obj_subjet_id)
 create_lessons_query = "INSERT INTO lessons(title, subject_id) VALUES (%s, %s)"
-cursor.execute(create_lessons_query,('first_less_bio', obj_subjet_id))
+cursor.execute(create_lessons_query, ('first_less_bio', obj_subjet_id))
 first_less_fis_id = cursor.lastrowid
 print('ID first lesson: ', first_less_fis_id)
 cursor.execute(create_lessons_query, ('second_less_math', fizra_subjets_id))
@@ -105,6 +105,6 @@ JOIN subjets on lessons.subject_id = subjets.id
 WHERE students.id = {last_student_id}
 '''
 all_info_by_student_id = cursor.execute(all_info_by_student_id_query)
-all_information = cursor.fetchone ()
+all_information = cursor.fetchone()
 print('All infomation about student: ', all_information)
 db.close()
