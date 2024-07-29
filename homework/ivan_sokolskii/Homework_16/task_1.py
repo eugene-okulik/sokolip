@@ -17,7 +17,7 @@ query_student_name = '''
 SELECT name, second_name, groups.title as group_title, books.title as book_title,
 subjets.title as subject_title, lessons.title as lesson_title, marks.value as mark_value
 FROM students
-JOIN books on students.id = books.taken_by_student_id 
+JOIN books on students.id = books.taken_by_student_id
 JOIN marks on students.id = marks.student_id
 JOIN `groups` on students.group_id = `groups`.id
 JOIN lessons on marks.lesson_id = lessons.id
@@ -44,7 +44,7 @@ file_path = os.path.abspath(os.path.join(current_directory, '../..', 'eugene_oku
 def read_csv_file(file_path):
     with open(file_path, newline='') as csv_file:
         data = csv.DictReader(csv_file)
-        return[row for row in data]
+        return [row for row in data]
     # for row in data:
     #     print(row)
     #     for key, value in row.items():
