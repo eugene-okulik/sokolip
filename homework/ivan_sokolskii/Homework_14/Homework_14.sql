@@ -31,5 +31,18 @@ SELECT id from books ORDER BY id DESC LIMIT 1 OFFSET 2;
 SELECT * FROM marks order by id desc;
 SELECT * FROM marks WHERE student_id = 1640;
 select * from books;
+select * from `groups`;
+select * from subjets;
+select * from marks;
 select * from students  order by id desc limit 5;
 Update students SET group_id = 1580 where id = 1645;
+SELECT name, second_name, groups.title as group_title, books.title as book_title,
+subjets.title as subject_title, lessons.title as lesson_title, marks.value as mark_value
+FROM students
+JOIN books on students.id = books.taken_by_student_id 
+JOIN marks on students.id = marks.student_id
+JOIN `groups` on students.group_id = `groups`.id
+JOIN lessons on marks.lesson_id = lessons.id
+JOIN subjets on lessons.subject_id = subjets.id;
+
+select * from tblpcrs where `txt_pcrtype` = 'PCR96TP' and `Guid_PCRSheetID` = 2183841;
