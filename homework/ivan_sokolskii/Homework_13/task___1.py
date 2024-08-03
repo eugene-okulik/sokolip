@@ -13,7 +13,7 @@ for line in lines:
         date_format = "%Y-%m-%d %H:%M:%S.%f"
         date = datetime.datetime.strptime(date_str, date_format)
         action = parts[1]
-        if 'распечатать эту датуб но на неделю позже' in action:
+        if 'распечатать эту дату но на неделю позже' in action:
             new_date = date + datetime.timedelta(weeks=1)
             print(new_date.strptime(date_format))
         elif 'распечатать какой это будет день недели' in action:
