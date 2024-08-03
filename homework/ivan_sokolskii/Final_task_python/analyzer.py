@@ -15,6 +15,7 @@ def search_text_in_log(file_path, search_text):
                 results.append((start_line, context))
     return results
 
+
 def process_logs(folder, search_text):
     for root, dir, files in os.walk(folder):
         for file in files:
