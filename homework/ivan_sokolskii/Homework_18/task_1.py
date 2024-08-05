@@ -36,9 +36,9 @@ def add_object():
     }
     headers = {'Content-Type': 'application/json'}
     response = requests.post(url,
-    json=body,
-    headers=headers
-    )
+                             json=body,
+                             headers=headers
+                             )
     assert response.status_code == 200, 'Wrong status code'
 
 def new_object():
@@ -54,9 +54,9 @@ def new_object():
     }
     headers = {'Content-Type': 'application/json'}
     response = requests.post(url,
-    json=body,
-    headers=headers
-    )
+                             json=body,
+                             headers=headers
+                             )
     return response.json()['id']
 
 
@@ -77,9 +77,9 @@ def put_object():
     }
     headers = {'Content-Type': 'application/json'}
     response = requests.put(f'https://api.restful-api.dev/objects/{post_id}',
-    json=body,
-    headers=headers
-    ).json()
+                            json=body,
+                            headers=headers
+                            ).json()
     assert response['updatedAt'] != None, 'Not updated'
     clear_data(post_id)
 
@@ -93,9 +93,9 @@ def patch_object():
     }
     headers = {'Content-Type': 'application/json'}
     response = requests.patch(f'https://api.restful-api.dev/objects/{post_id}',
-    json=body,
-    headers=headers
-    ).json()
+                              json=body,
+                              headers=headers
+                              ).json()
     assert response['name'] == update_name, 'Not updated with PATCH'
     clear_data(post_id)
 
