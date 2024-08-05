@@ -75,7 +75,7 @@ def put_object():
             "CPU model": "Intel Core i9",
             "Hard disk size": "1 TB",
             "color": "silver"
-            }
+        }
     }
     headers = {'Content-Type': 'application/json'}
     response = requests.put(f'https://api.restful-api.dev/objects/{post_id}',
