@@ -41,6 +41,7 @@ def add_object():
                              )
     assert response.status_code == 200, 'Wrong status code'
 
+
 def new_object():
     url = 'https://api.restful-api.dev/objects'
     body = {
@@ -61,18 +62,19 @@ def new_object():
 
 
 def clear_data(post_id):
-    response = requests.delete(f'https://api.restful-api.dev/objects/{post_id}')
+    requests.delete(f'https://api.restful-api.dev/objects/{post_id}')
+
 
 def put_object():
     post_id = new_object()
     body = {
         "name": "Apple MacBook Pro 16",
         "data": {
-          "year": 2019,
-          "price": 2049.99,
-          "CPU model": "Intel Core i9",
-          "Hard disk size": "1 TB",
-          "color": "silver"
+            "year": 2019,
+            "price": 2049.99,
+            "CPU model": "Intel Core i9",
+            "Hard disk size": "1 TB",
+            "color": "silver"
             }
     }
     headers = {'Content-Type': 'application/json'}
@@ -80,13 +82,12 @@ def put_object():
                             json=body,
                             headers=headers
                             ).json()
-    assert response['updatedAt'] != None, 'Not updated'
+    assert response['updatedAt'] is not None, 'Not updated'
     clear_data(post_id)
 
 
 def patch_object():
     post_id = new_object()
-    url = 'https://api.restful-api.dev/objects/7'
     update_name = '"Apple MacBook Pro 16 (Updated Name)"'
     body = {
         "name": update_name
@@ -114,4 +115,3 @@ add_object()
 put_object()
 patch_object()
 delete_post()
-    
