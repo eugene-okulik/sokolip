@@ -1,2 +1,6 @@
 secrets.py
 .env
+.pytest_cache
+allure-results
+allure-reports
+allure-report
