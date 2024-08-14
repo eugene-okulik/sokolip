@@ -15,7 +15,7 @@ def start_end():
 def test_all_posts(start_end):
     print('before test')
     url = 'https://api.restful-api.dev/objects'
-    with allure.step(f'Run get request for all posts'):
+    with allure.step('Run get request for all posts'):
         response = requests.get(url).json()
     assert len(response) == 13, 'Wrong amount'
     print('after test')
@@ -40,7 +40,7 @@ def test_post_by_id():
 def test_one_post():
     print('Start testing')
     post_id = '7'
-    with allure.step(f'Create new post with id'):
+    with allure.step('Create new post with id'):
         response = requests.get(f'https://api.restful-api.dev/objects/{post_id}').json()
     assert response['id'] == post_id, 'Wrong post id'
     print('after test')
@@ -86,7 +86,7 @@ def test_add_object(body):
                              json=body,
                              headers=headers
                              )
-    with allure.step(f'Check that status code is correct'):
+    with allure.step('Check that status code is correct'):
         assert response.status_code == 200, 'Wrong status code'
     print('after test')
 
