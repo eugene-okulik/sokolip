@@ -4,7 +4,7 @@ import requests
 
 
 class GetObjectById(Endpoint):
-    def get_object_by_id(self, post_ids,  headers=None):
+    def get_object_by_id(self, post_ids, headers=None):
         headers = headers if headers else self.headers
         query_params = '&'.join([f'id={post_id}' for post_id in post_ids])
         self.response = requests.get(

@@ -19,7 +19,7 @@ class UpdatePost(Endpoint):
     def make_changes_in_object(self, post_id, body, headers=None):
         headers = headers if headers else self.headers
         self.response = requests.put(
-            url = f'{self.url}/{post_id}',
+            url=f'{self.url}/{post_id}',
             json=body,
             headers=headers
         )

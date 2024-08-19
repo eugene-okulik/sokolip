@@ -23,7 +23,7 @@ class PatchPost(Endpoint):
             "name": update_name
         }
         self.response = requests.patch(
-            url = f'{self.url}/{post_id}',
+            url=f'{self.url}/{post_id}',
             json=body,
             headers=headers
         )
