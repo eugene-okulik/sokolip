@@ -1,4 +1,4 @@
-from test_api_isokolskii.endpoints.endpoint import Endpoint
+from endpoints.endpoint import Endpoint
 import allure
 import requests
 
@@ -11,6 +11,5 @@ class GetObjectById(Endpoint):
             url=f'{self.url}?{query_params}'
         )
         response = self.response.json()
-        print(response)
         for i, post_id in enumerate(post_ids):
             assert response[i].get('id') == str(post_id), f'Wrong post_id for object {i}'

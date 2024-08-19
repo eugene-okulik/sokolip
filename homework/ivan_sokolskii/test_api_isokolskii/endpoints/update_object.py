@@ -1,4 +1,4 @@
-from test_api_isokolskii.endpoints.endpoint import Endpoint
+from endpoints.endpoint import Endpoint
 import allure
 import requests
 
