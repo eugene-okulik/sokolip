@@ -1,14 +1,14 @@
 from locust import task, HttpUser
 import random
 
-# https://jsonplaceholder.typicode.com/
+
 class AllProducts(HttpUser):
     headers = {'Content-Type': 'application/json'}
 
     @task
     def get_all_product(self):
         self.client.get(
-           '/posts'
+            '/posts'
         )
 
     @task
@@ -42,7 +42,7 @@ class AllProducts(HttpUser):
                 'userId': 1,
             },
             headers={
-            'Content-type': 'application/json; charset=UTF-8'
+                'Content-type': 'application/json; charset=UTF-8'
             }
         )
 
@@ -54,7 +54,7 @@ class AllProducts(HttpUser):
                 'title': 'foo',
             },
             headers={
-            'Content-type': 'application/json; charset=UTF-8'
+                'Content-type': 'application/json; charset=UTF-8'
             }
         )
 
