@@ -46,8 +46,6 @@ NEW_BODY = (
 POST_IDS = [3, 5, 10]
 
 
-
-
 @pytest.mark.parametrize('body', TEST_DATA)
 def test_add_object(create_post_endpoint, body):
     create_post_endpoint.new_object(body=body)
