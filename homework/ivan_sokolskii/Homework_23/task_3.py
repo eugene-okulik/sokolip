@@ -10,7 +10,6 @@ from selenium.webdriver.support import expected_conditions as EC
 def driver():
     chrome_driver = webdriver.Chrome()
     chrome_driver.maximize_window()
-    wait = WebDriverWait(driver, 5)
     yield chrome_driver
 
 
@@ -28,6 +27,6 @@ def test_press_start_button(driver):
     start_button.click()
     wait = WebDriverWait(driver, 60)
     hello_world_locator = ("xpath", "//div[@id='finish']")
-    hello_word_element = wait.until(EC.visibility_of_element_located(hello_world_locator))
+    wait.until(EC.visibility_of_element_located(hello_world_locator))
     check_hello_word = driver.find_element(By.XPATH, "//div[@id='finish']/h4")
     assert check_hello_word.text == "Hello World!"
