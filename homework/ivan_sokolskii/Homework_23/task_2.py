@@ -9,7 +9,6 @@ last_name = "Ivanov"
 user_email = "123@ya.ru"
 mobile_phone = "1234567891"
 dob = '12 Sep 1999'
-subjects = "Hello world"
 current_address = "Cancun"
 driver.get(url)
 name_field = driver.find_element(By.XPATH, "//input[@id='firstName']")
@@ -31,7 +30,9 @@ select_mounth.select_by_value('7')
 select_day = driver.find_element(By.XPATH, "//div[@class='react-datepicker__day react-datepicker__day--004']")
 select_day.click()
 subject_field = driver.find_element(By.XPATH, "//input[@id='subjectsInput']")
-subject_field.send_keys(subjects)
+subject_field.send_keys('e')
+subject_list_1 = driver.find_element(By.XPATH, "//div[text()='English']")
+subject_list_1.click()
 hobbies_checkbox = driver.find_element(By.XPATH, "//label[@for='hobbies-checkbox-1']")
 hobbies_checkbox.click()
 current_address_field = driver.find_element(By.XPATH, "//textarea[@id='currentAddress']")
