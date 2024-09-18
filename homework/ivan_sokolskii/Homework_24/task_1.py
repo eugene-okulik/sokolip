@@ -25,7 +25,7 @@ def test_add_item_on_cart(driver):
     driver.switch_to.window(driver.window_handles[1])
     add_cart_button = driver.find_element(By.XPATH, "//a[text()='Add to cart']")
     add_cart_button.click()
-    sleep(2)
+    WebDriverWait(driver, 5).until(EC.alert_is_present())
     alert = Alert(driver)
     alert.accept()
     driver.close()
