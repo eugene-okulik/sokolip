@@ -25,7 +25,7 @@ def test_check_tab(page: Page, context: BrowserContext):
     expect(result).to_have_text('I am a new page in a new tab')
     check_button = page.get_by_role('link', name='Click')
     expect(check_button).to_be_enabled()
-    
+
 
 def test_change_button_color(page: Page):
     page.goto('https://demoqa.com/dynamic-properties')
