@@ -13,6 +13,7 @@ def test_click_alert(page: Page):
     after_click_text = page.locator("//p[@id='result-text']")
     expect(after_click_text).to_have_text('Ok')
 
+
 def test_check_tab(page: Page, context: BrowserContext):
     page.goto('https://www.qa-practice.com/elements/new_tab/button')
     link = page.locator('#new-page-button')
@@ -24,6 +25,7 @@ def test_check_tab(page: Page, context: BrowserContext):
     expect(result).to_have_text('I am a new page in a new tab')
     check_button = page.get_by_role('link', name='Click')
     expect(check_button).to_be_enabled()
+    
 
 def test_change_button_color(page: Page):
     page.goto('https://demoqa.com/dynamic-properties')
