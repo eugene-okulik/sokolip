@@ -9,18 +9,7 @@ def test_listen(page: Page):
     def handle_route(route: Route):
         response = route.fetch()
         body = response.json()
-
-        def replace_product_name(data):
-            if isinstance(data, dict):
-                for key, value in data.items():
-                    if key == "productName" and value == "iPhone 16 Pro":
-                        data[key] = "Яблокофон 16 Pro"
-                    else:
-                        replace_product_name(value)
-            elif isinstance(data, list):
-                for item in data:
-                    replace_product_name(item)
-        replace_product_name(body)
+        body['body']['digitalMat'][0]['familyTypes'][0]['productName'] = "Яблокофон 16"
         body = json.dumps(body)
         route.fulfill(
             response=response,
